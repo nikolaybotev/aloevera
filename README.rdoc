@@ -1,28 +1,28 @@
-== README
+== AloeVera
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+=== Development
 
-Things you may want to cover:
+* ruby 2.3
+* rails 4.2
+* sqlite
+* imagemagick
 
-* Ruby version
+<tt>
+bin/rake db:migrate
+bin/rails server
+</tt>
 
-* System dependencies
+=== Heroku
 
-* Configuration
+<tt>
+heroku create
+heroku addons:create heroku-postgresql
+git push heroku master
+heroku run rake db:migrate
+heroku run rake spree_auth:admin:create
+</tt>
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Setup S3 storage for assets
+http://guides.spreecommerce.org/developer/s3_storage.html
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
