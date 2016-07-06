@@ -55,6 +55,8 @@ group :production do
   gem 'pg', '0.18.4'
   # for heroku
   gem 'rails_12factor'
+  # for image uploads
+  gem 'aws-sdk'
 end
 
 ruby '2.3.1'
